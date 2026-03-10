@@ -200,7 +200,3 @@ http://localhost:3000
 ```
 
 ---
-
-# Autor
-
-Proyecto realizado como parte de una actividad práctica de **Backend con Node.js y PostgreSQL**.
