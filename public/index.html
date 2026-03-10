@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRUD Clientes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="container">
+    <h1>Gestión de Clientes</h1>
+    <p class="subtitle">CRUD con Node.js + PostgreSQL</p>
+  </header>
+
+  <main class="container grid">
+
+    <!-- Crear cliente -->
+    <section class="card">
+      <h2>Crear cliente</h2>
+
+      <div class="form-row">
+        <input id="rutCrear" placeholder="RUT">
+        <input id="nombreCrear" placeholder="Nombre">
+        <input id="edadCrear" placeholder="Edad">
+      </div>
+
+      <button class="btn primary" onclick="crearCliente()">Crear</button>
+    </section>
+
+    <!-- Buscar -->
+    <section class="card">
+      <h2>Buscar clientes</h2>
+
+      <div class="form-row">
+        <input id="rutBuscar" placeholder="RUT">
+        <input id="nombreBuscar" placeholder="Nombre o prefijo">
+        <input id="edadBuscar" placeholder="Edad">
+      </div>
+
+      <div class="buttons">
+        <button class="btn" onclick="buscarClientes()">Buscar</button>
+        <button class="btn secondary" onclick="listarClientes()">Listar todos</button>
+      </div>
+    </section>
+
+    <!-- Editar -->
+    <section class="card">
+      <h2>Modificar nombre</h2>
+
+      <div class="form-row">
+        <input id="rutEditar" placeholder="RUT">
+        <input id="nombreEditar" placeholder="Nuevo nombre">
+      </div>
+
+      <button class="btn warning" onclick="editarCliente()">Modificar</button>
+    </section>
+
+    <!-- Eliminar -->
+    <section class="card">
+      <h2>Eliminar cliente</h2>
+
+      <div class="form-row">
+        <input id="rutEliminar" placeholder="RUT">
+        <input id="nombreEliminar" placeholder="Nombre">
+        <input id="edadEliminar" placeholder="Edad">
+      </div>
+
+      <button class="btn danger" onclick="eliminarCliente()">Eliminar</button>
+    </section>
+
+  </main>
+
+  <!-- Mensaje backend -->
+  <div class="container">
+    <div id="mensaje" class="mensaje"></div>
+  </div>
+
+  <!-- Tabla resultados -->
+  <section class="container card">
+    <h2>Resultados</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>RUT</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody id="tablaClientes"></tbody>
+    </table>
+  </section>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>
